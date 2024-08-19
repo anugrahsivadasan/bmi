@@ -1,0 +1,85 @@
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body background="https://thumbs.dreamstime.com/z/healthcare-concept-bmi-wall-background-painted-blue-text-black-brick-hand-drawn-medicine-icons-109384558.jpg " >
+    <div class="container border border-dark  rounded shadow w-75 text-center ">
+
+        <div class="nav rounded d-flex justify-content-center ps-4">
+            <img width="120px" height="120px" src="./img/Component21.svg" alt="">
+            <span class="  ms-3">BODY MASS INDEX <br><span class="fs-3 mb-2">CALCULATOR</span></span>
+
+        </div>
+
+        <div class="row ">
+            <div class="col-12 d-flex justify-content-center">
+                <div class=" col-5 ms-2 fs-4">
+                    <div class="text-start mt-4 p-3">
+                        <label for="" class="ms-2">GENDER</label><br>
+
+                        <input type="radio" id="male" name="Gender">
+                        <label for="male">male</label>
+                        <input type="radio" id="female" name="Gender">
+                        <label for="female">female</label><br>
+
+                    </div>
+                    <div class="text-start mt-4 p-3 fs-4">
+                        <label for="">Age <span class="text-center fs-5">(2yrs and above)</span></label>
+                        <input id="age" type="text" class="form-control me-2 mt-2" placeholder="YOUR AGE IN Yrs">
+                    </div>
+                </div>
+                <div class="col-5 ms-2 fs-4 g-2 text-start">
+                    <div class="mt-4 p-3 fs-4">
+                        <label for="">Weight</label>
+                        <input id="weight" type="text" class="form-control me-2 mt-2" placeholder="Your weight in Kgs">
+                    </div>
+                    <div class="mt-4 p-3 fs-4">
+                        <label for="">Height</label>
+                        <input id="height" type="text" class="form-control me-2 mt-2" placeholder="Your height in cms">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button onclick="calculateBMI()" type="button"> Calculate</button>
+                <button onclick="allclear()" type="button" class="ms-3 px-5"> Reset</button>
+            </div>
+
+        </div>
+        <div id="note" class=" container w-100 rounded rounded-2 mb-3 mt-3">
+            <h3 class=" fw-bold">YOUR BMI IS</h3>
+            <div id="result">
+
+            </div>
+            <div class=" mt-3">
+                <img id="under" height="100px" src="./img/weight.svg" alt="" style="opacity: 0.3;">
+                <img id="normal" height="100px" src="./img/underWeight.svg" alt="" style="opacity: 0.3;">
+                <img id="over" height="100px" src="./img/overWeight.svg" alt="" style="opacity: 0.3;">
+                <img id="obese" height="100px" src="./img/health_assesment.svg" alt="" style="opacity: 0.3;">
+                <p class="fw-bold text-success my-2 pb-2"> Healthy BMI range: 18.5 kg/m2 - 25 kg/m2</p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./script.js"></script>
+    <div class="st-inspector"><iframe></iframe></div>
+    <div style="z-index: 2147483646; position: fixed;"></div>
+    <div style="pointer-events: none; position: fixed; z-index: 2147483646;"></div>
+</body>
+
+</html>
